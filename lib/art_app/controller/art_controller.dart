@@ -8,18 +8,14 @@ class ArtController {
   String galleryName = 'looking art from all museams';
 
   List<ArtItem> getArtList(galeryId) {
-    artList = artsListData;
-    artList = galeryId == 0
-        ? artList
-        : artList.where((artItem) => artItem.galleryId == galeryId).toList();
-    return artList;
+    return artList = galeryId == 0
+        ? artsListData
+        : artsListData.where((artItem) => artItem.galleryId == galeryId).toList();
   }
 
-  String gaLLeryName(galeryId) {
-    galleryName = 'looking art from all museams';
-    galleryName = galeryId == 0
+  String gaLLeryName(galleryId) {
+    return galleryName = galleryId == 0
         ? galleryName
-        : ('in ${galleryList.firstWhere((gallery) => gallery.galleryId == galeryId).name}');
-    return galleryName;
+        : ('in ${galleryList.firstWhere((gallery) => gallery.galleryId == galleryId).name}');
   }
 }
